@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'nunito', sans-serif;
+
+    
+}
+
+body{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url(images/pic3.svg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(77, 78, 109) ;;
+
+}
+
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+
+}
+header .logo{
+    position: relative;
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bolder;
+
+
+}
+
+header nav .navigation a{
+color: white;
+background:rgb(77, 78, 109) ;
+font-weight: 500;
+letter-spacing: 1px;
+padding: 2px 15px;
+border-radius: 20px;
+text-decoration: none;
+transition: 0.3s;
+
+
+
+
+}
+
+header nav .navigation a:not(:last-child){
+    margin-right: 30px;
+
+}
+
+header .navigation a:hover{
+    background: rgb(231, 46, 46);
+
+
+}
+
+#about{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+#about .contents img{
+    padding-top: 20px;
+    height: auto;
+    width: 240px;
+    max-width: 100%;
+    float: center;
+    margin-right:30px ;
+
+}
+
+.text{
+    width: 550px;
+    max-width: 100%;
+    padding: 0 10px;
+    color: whitesmoke;
+
+}
+.contents{
+    width: 1280px;
+    max-width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.text h1{
+    color: #10378a;
+    font-size: 85px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+
+}
+.text h5{
+    color: white;
+    font-size: 25px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.text p{
+    color: #c6cadf;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+
+}
+
+.btn-i{
+    
+        color: white;
+        background:rgb(231, 46, 46) ;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: 0.3s;
+        transition-property: background;
+    
+    }
+    
+    .contents .btn-i:hover{
+        background: rgb(89, 57, 206);
+        text-decoration: none;
+        color: white;
+
+    }
+
+
+label{
+    display: none;
+
+}
+
+#check{
+    z-index: 3;
+
+}
+
+
+/*responsive css*/
+
+@media(max-width:960px){
+
+    header .navigation{
+        display: none;
+    }
+    label{
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property:color ;
+
+
+    }
+
+    label:hover{
+        color:rgb(231, 46, 46) ;
+
+
+
+    }
+    label .close-btn{
+        display: none;
+
+    }
+
+    #check:checked ~ header .navigation{
+        z-index: 2;
+        position: fixed;
+        background: rgba(162, 129, 251, 0.9);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #check:checked ~ header .navigation a{
+
+        font-weight: 700;
+        margin-right:0 ;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+
+    }
+
+    #check:checked ~ header label .menu-btn{
+        display: none;
+
+    }
+
+    #check:checked ~ header label .close-btn{
+        z-index: 2;
+        display: block;
+        position: fixed;
+
+    }
+
+    label .menu-btn{
+        position: absolute;
+
+    }
+
+    header .logo{
+        position: absolute;
+        bottom: -6px;
+
+    }
+
+}
+
+@media screen and(max-width:1180px) {
+    #about{
+        width: 100%;
+        height: auto;
+        padding: 70px 0;
+
+    }
+    
+}
+
+@media screen and(max-width:650px){
+    #about .contents img{
+        margin-bottom: 35px;
+
+    }
+    .text h1{
+        font-size:60px;
+        margin-bottom:20px;
+
+    }
+}
